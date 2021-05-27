@@ -1,0 +1,25 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+    // *********
+    //<React.Fragment> es lo mismo que <>
+    // ********
+        const element = <React.Fragment>
+            <span>Hola</span> <span>Mundo</span>
+            </React.Fragment>
+        //const element = <div className='container'>Hello World</div>
+        // const holaElement = React.createElement('span', null, 'Hola')
+        // const mundoElement = React.createElement('span', null, 'Mundo')
+        // const element = React.createElement(
+        //     React.Fragment,
+        //     null,
+        //     holaElement,
+        //     '<->',
+        //     mundoElement,
+        // )
+        ReactDOM.render(element, document.getElementById('root'))
+    </script>
+</body>
