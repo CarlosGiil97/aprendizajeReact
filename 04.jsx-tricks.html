@@ -1,0 +1,29 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <script type="text/babel">
+        const rootElement = document.getElementById('root')
+        const children = 'Hola Mundo'
+        const miContenido2 = 'Adios Mundo'
+        const contenidoH3 = 'Muy buenas tardes'
+        const estiloH3 = 'color:red;font-size:40px'
+        const className = 'container'
+        const props = {children, className}
+        //********
+        // const element =(
+        //     <div  className={miClase}>
+        //     {miContenido}
+        //     {miContenido2}
+        //     <span>Hola</span> <strong>Mundillo</strong>
+        //     <h3>{contenidoH3}</h3>
+        //     </div>
+        // )
+        //*******
+        //const element = <div className={miClase} children={miContenido} />
+        const element = <div id="app-root" {... props} />
+        ReactDOM.render(element, rootElement)
+    </script>
+</body>
